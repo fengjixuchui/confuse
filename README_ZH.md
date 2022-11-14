@@ -1,5 +1,5 @@
 <a name="54fa66eaba498942a1604ffa591838ac"></a>
-# ![1593768128247-016fe60b-8853-48fb-8b76-f9f702b83db5.png](https://cdn.nlark.com/yuque/0/2020/png/213807/1606304234500-46a10b02-f83d-4996-99fc-ce092241ea7c.png#crop=0&crop=0&crop=1&crop=1&height=100&id=SslN0&name=1593768128247-016fe60b-8853-48fb-8b76-f9f702b83db5.png&originHeight=200&originWidth=200&originalType=binary&ratio=1&rotation=0&showTitle=false&size=28522&status=done&style=shadow&title=&width=100)
+# ![1593768128247-016fe60b-8853-48fb-8b76-f9f702b83db5.png](https://cdn.nlark.com/yuque/0/2020/png/213807/1606304234500-46a10b02-f83d-4996-99fc-ce092241ea7c.png#averageHue=%23e9c2bf&crop=0&crop=0&crop=1&crop=1&height=100&id=SslN0&name=1593768128247-016fe60b-8853-48fb-8b76-f9f702b83db5.png&originHeight=200&originWidth=200&originalType=binary&ratio=1&rotation=0&showTitle=false&size=28522&status=done&style=shadow&title=&width=100)
 <a name="HGXXr"></a>
 ### 中文 | [English](/README.md)
 <a name="174be9787bb85687706b11dfa538cd99"></a>
@@ -38,9 +38,9 @@
 7. 正常项目（或者第三方库）混淆完基本不报错（除了一些个别[语法不严谨](https://www.yuque.com/docs/share/4a87ec96-80fe-4d25-873d-93cb428b3e15?#5sCql)造成混淆后报错）
 <a name="F1BbD"></a>
 #### 测试工程说明：
-> [confuse_test](https://github.com/520coding/confuse/tree/master/confuse_test)：包含oc、c++、swift及一些第三方用例，快速验证整体效果
-> [confuse_test_oc](https://github.com/520coding/confuse/tree/master/confuse_test_oc)：只包含oc，方便验证每个功能的效果
-> [confuse_test_swift](https://github.com/520coding/confuse/tree/master/confuse_test_swift)：只包含swift，代码来源于[Apple官方实例代码](https://docs.swift.org/swift-book/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0)，方便验证每个功能的效果
+> [confuse_test](https://github.com/520coding/confuse/tree/master/confuse_test)：包含oc、c++、swift及一些第三方用例，快速验证整体效果  
+> [confuse_test_oc](https://github.com/520coding/confuse/tree/master/confuse_test_oc)：只包含oc，方便验证每个功能的效果  
+> [confuse_test_swift](https://github.com/520coding/confuse/tree/master/confuse_test_swift)：只包含swift，代码来源于[Apple官方实例代码](https://docs.swift.org/swift-book/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0)，方便验证每个功能的效果  
 
 可任意修改源码来验证实际效果，建议用不同工具混淆以上测试工程或者第三方开源库项目，对比效果。
 <a name="426215c094f184f34acdb12593ddb1fc"></a>
@@ -78,11 +78,12 @@ confuse是一款[混淆工具](https://github.com/520coding/confuse)，尽可能
 3. [资源替换]，混淆前指定需要替换的资源文件夹，自动进行同名文件替换，方便快捷
 4. [删除注释]，识别单行、多行注释
 5. [修改图片]，质量修改、大小偏移、局部像素微调、RGBA偏移、模式修改（支持热更新）
-6. [修改文件属性]，如创建时间、访问时间、修改时间
-7. [修改项目]，无需删除Cocoapods
+6. [修改Lottie]，模拟真实Lottie文件结构，修改和扩充源文件，基本不影响实际效果
+7. [修改文件属性]，如创建时间、访问时间、修改时间
+8. [修改项目]，无需删除Cocoapods
    1. 可设置‘修改uuid’，彻底翻新
    2. 自定义‘修改target’名称，相关联信息同步更新
-8. 自动备份源码
+9. 自动备份源码
 <a name="279a46203c9fe475b30ffab43dad6dba"></a>
 ### Objective-C
 
@@ -205,18 +206,13 @@ confuse是一款[混淆工具](https://github.com/520coding/confuse)，尽可能
    1. 快速混淆模式
 <a name="af444a353c9380bc9aa8aec067937316"></a>
 # 图文介绍
-运行APP效果图，使用前请详细阅读[工具使用教程](https://www.yuque.com/docs/share/edd2603f-d09d-4795-ae71-b42419b99446?#《confuse使用说明》)<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/213807/1607931800015-f60e682f-6ef3-4c5a-bfc5-4c88222bb1a7.png#crop=0&crop=0&crop=1&crop=1&height=540&id=Ai791&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1080&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&size=489209&status=done&style=none&title=&width=960)
+运行APP效果图，使用前请详细阅读[工具使用教程](https://www.yuque.com/docs/share/edd2603f-d09d-4795-ae71-b42419b99446?#《confuse使用说明》)<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/213807/1607931800015-f60e682f-6ef3-4c5a-bfc5-4c88222bb1a7.png#averageHue=%239a6a2a&crop=0&crop=0&crop=1&crop=1&height=540&id=Ai791&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1080&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&size=489209&status=done&style=none&title=&width=960)
 <a name="c318fa67bf88d5d842cee03115743b4b"></a>
 # 更新日志
-<a name="jHHqn"></a>
-### v6.4.3（2022.09.30）
+<a name="d12Pl"></a>
+### v6.5.2（2022.11.09）
 
-1. 强化Swift[重命名枚举]，支持‘原始值’设置，细化控制范围
-2. 修复Swift个别文件解析失败
-3. 修复Swift[重命名类]，可能出现嵌套类型误改问题
-4. 修复Swift[插入局部变量]，枚举缩写情况拆分后没有上下文联系导致语法报错
-5. 修复Swift其他小概率出现混淆后语法错误
-6. 优化交互，更新提示信息
+1. 适配Xcode14
 
 [查看更多历史更新记录](https://www.yuque.com/docs/share/39f2f60e-b6a8-443b-b005-b9364fb79b95?#《confuse更新说明》)
 <a name="41b9f638a3e62c9449ec872644258c8d"></a>

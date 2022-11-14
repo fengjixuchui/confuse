@@ -1,5 +1,5 @@
 <a name="tMJSz"></a>
-# ![](https://cdn.nlark.com/yuque/0/2020/png/213807/1606304234500-46a10b02-f83d-4996-99fc-ce092241ea7c.png#crop=0&crop=0&crop=1&crop=1&from=paste&height=200&id=v0ghq&margin=%5Bobject%20Object%5D&originHeight=200&originWidth=200&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=200)
+# ![](https://cdn.nlark.com/yuque/0/2020/png/213807/1606304234500-46a10b02-f83d-4996-99fc-ce092241ea7c.png#averageHue=%23e9c2bf&crop=0&crop=0&crop=1&crop=1&from=paste&height=200&id=v0ghq&margin=%5Bobject%20Object%5D&originHeight=200&originWidth=200&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=200)
 <a name="beqYw"></a>
 ### English | [中文](/README_ZH.md)
 <a name="wNymF"></a>
@@ -38,9 +38,9 @@ In fact, to identify the pros and cons of a tool, just look at the following poi
 7. Normal projects (or third-party libraries) basically do not report errors after obfuscation (except for some individual [improper grammars](https://www.yuque.com/docs/share/4a87ec96-80fe-4d25-873d-93cb428b3e15#iz0Zi) that cause confusion and report errors)
 <a name="KDqM3"></a>
 #### Test engineering description:
-> [confuse_test](https://github.com/520coding/confuse/tree/master/confuse_test): Contains oc, c++, swift and some third-party use cases to quickly verify the overall effect
-> [confuse_test_oc](https://github.com/520coding/confuse/tree/master/confuse_test_oc): only contains oc, which is convenient to verify the effect of each function
-> [confuse_test_swift](https://github.com/520coding/confuse/tree/master/confuse_test_swift): only contains swift, the code comes from[ Apple's official example code](https://docs.swift.org/swift-book/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0), which is convenient to verify the effect of each function
+> [confuse_test](https://github.com/520coding/confuse/tree/master/confuse_test): Contains oc, c++, swift and some third-party use cases to quickly verify the overall effect  
+> [confuse_test_oc](https://github.com/520coding/confuse/tree/master/confuse_test_oc): only contains oc, which is convenient to verify the effect of each function  
+> [confuse_test_swift](https://github.com/520coding/confuse/tree/master/confuse_test_swift): only contains swift, the code comes from[ Apple's official example code](https://docs.swift.org/swift-book/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0), which is convenient to verify the effect of each function  
 
 The source code can be modified arbitrarily to verify the actual effect. It is recommended to use different tools to confuse the above test projects or third-party open source library projects to compare the effects.
 <a name="426215c094f184f34acdb12593ddb1fc"></a>
@@ -78,11 +78,12 @@ The following functions are supported:
 3. [Resource replacement], specify the resource folder that needs to be replaced before obfuscation , and automatically replace the file with the same name, which is convenient and quick
 4. [Remove comment], identify single-line, multi-line comments
 5. [Edit picture], quality modification, size shift, local pixel fine-tuning，RGBA offset，mode modification (support hot update)
-6. [Modify file attributes], such as creation time, access time, modification time
-7. [Modify item], no need to delete Cocoapods
+6. [Modify Lottie], simulate the real Lottie file structure, modify and expand the source file, basically does not affect the actual effect
+7. [Modify file attributes], such as creation time, access time, modification time
+8. [Modify item], no need to delete Cocoapods
    1. Can be set to'modify uuid', completely refurbished
    2. Customize the name of the'modify target', and the associated information will be updated synchronously
-8. Automatic source code backup
+9. Automatic source code backup
 <a name="279a46203c9fe475b30ffab43dad6dba"></a>
 ### Objective-C
 
@@ -205,18 +206,13 @@ Update iterations will be carried out in the following order
    1. Fast obfuscation mode
 <a name="af444a353c9380bc9aa8aec067937316"></a>
 # Graphic introduction
-Run the APP rendering, please read the [tool usage tutorial](https://www.yuque.com/docs/share/cd0968ac-9c7e-415f-9e7c-1460b85e80e8) in detail before use<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/213807/1623167266244-4978d5ed-0b2c-42b5-80c4-1b44e4ff7f96.png#clientId=u4ef53c93-4376-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&height=877&id=ufbdd65fd&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1754&originWidth=2532&originalType=binary&ratio=2&rotation=0&showTitle=false&size=443560&status=error&style=none&taskId=ue83d9a90-392f-4558-9b46-f06320d2c45&title=&width=1266)
+Run the APP rendering, please read the [tool usage tutorial](https://www.yuque.com/docs/share/cd0968ac-9c7e-415f-9e7c-1460b85e80e8) in detail before use<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/213807/1623167266244-4978d5ed-0b2c-42b5-80c4-1b44e4ff7f96.png#averageHue=%233a9b1d&clientId=u4ef53c93-4376-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&height=877&id=ufbdd65fd&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1754&originWidth=2532&originalType=binary&ratio=2&rotation=0&showTitle=false&size=443560&status=error&style=none&taskId=ue83d9a90-392f-4558-9b46-f06320d2c45&title=&width=1266)
 <a name="c318fa67bf88d5d842cee03115743b4b"></a>
 # Update log
 <a name="ckOtE"></a>
-### v6.4.3 (2022.09.30)
+### v6.5.2 (2022.11.09)
 
-1. Enhance Swift [rename enum], support 'original value' setting, and refine the control range
-2. Fix Swift individual file parsing failure
-3. Fix Swift [rename class], there may be a problem of incorrectly changing nested types
-4. Fix Swift [insert local variable], there is no context connection after the enumeration abbreviation is split, resulting in a syntax error
-5. Fix the syntax error after other small probability of confusion in Swift
-6. Optimize interaction and update prompt information
+1. Adapt to Xcode14
 
 [View more historical update records](https://www.yuque.com/docs/share/39f2f60e-b6a8-443b-b005-b9364fb79b95?translate=en)
 <a name="41b9f638a3e62c9449ec872644258c8d"></a>
